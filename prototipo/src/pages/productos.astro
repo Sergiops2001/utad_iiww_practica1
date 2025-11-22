@@ -1,0 +1,50 @@
+---
+import Encabezado from "../layouts/Encabezado.astro"
+import Suscripciones from "../components/suscripciones.astro"
+---
+<Encabezado></Encabezado>
+
+  <main>
+    <!-- Descripción del producto -->
+    <section>
+      <h2 class="titulo">Nombre del producto</h2>
+      <p class="descripcion">Breve descripción del producto e información importante.</p>
+
+      <div>
+        <img src="#" alt="Imagen del producto 1">
+        <img src="#" alt="Imagen del producto 2">
+      </div>
+    </section>
+
+    <!-- Tipos de suscripción del producto -->
+    <Suscripciones></Suscripciones>
+
+  </main>
+
+</body>
+
+</html>
+<style>
+    div{
+        display: flex;
+        gap: 1rem;
+        justify-content: center;
+        margin-bottom: 2rem;
+    }
+    img{
+        width: 300px;
+        height: 200px;
+        background: #ccc; /* modo prototipo */
+        border-radius: 6px;
+    }
+    .titulo{
+        text-align: center;
+        margin-top: 2rem;
+        margin-bottom: 1rem;
+    }
+    .descripcion{
+        text-align: center;
+        margin-bottom: 2rem;
+    }
+
+</style>

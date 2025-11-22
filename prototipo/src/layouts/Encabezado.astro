@@ -1,0 +1,82 @@
+---
+---
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Paquetes de Software</title>
+</head>
+	<body>
+    <!--Cabecera común -->
+    <header>
+    <img src="#" alt="logo">
+    <h1>Paquetes de software</h1>
+    </header>
+    <!-- Navbar -->
+    <nav>
+	<ul>
+	<li><a href="/">Inicio</a></li>
+	<li><a href="/buscar">Buscar</a></li>
+	<li><a href="/productos">Productos</a></li>
+	<li><a href="/usuario">Usuario</a></li>
+	<li><a href="/carrito">Carrito</a></li>
+	</ul>
+</nav>
+<main>
+	<slot />
+</main>
+	</body>
+</html>
+
+<style>
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #f6f6f6;
+}
+
+/* CABECERA */
+header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem 2rem;
+  background-color: #ffffff;
+  border-bottom: 1px solid #ddd;
+}
+
+header img {
+  width: 50px;
+  height: 50px;
+  background: #ccc; /* modo prototipo */
+  border-radius: 6px;
+}
+
+/* NAVBAR */
+nav {
+  background-color: #222;
+  padding: 0.5rem 0;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+  padding: 0;
+  margin: 0 2rem;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+
+</style>

@@ -1,0 +1,51 @@
+---
+export interface Props {
+    producto: string;
+    descripcion: string;
+    precio: string;
+}
+const { producto, descripcion, precio } = Astro.props;
+---  
+    <article class="producto">
+        <h3>{producto}</h3>
+        <p class="descripcion">{descripcion}</p>
+        <p class="precio">{precio}</p>
+        <button class="botonEliminar">Eliminar producto</button>
+    </article>
+
+    <style>
+.producto {
+    border: 1px solid #ccc;
+    padding: 1rem;
+    border-radius: 6px;
+    background: #fafafa;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+.producto h3 {
+    margin: 0 0 0.5rem;
+    text-transform: capitalize;
+}
+.producto .descripcion{
+    color: #555;
+    margin: 0.3rem 0;   
+}
+.producto .precio{
+    font-weight: bold;
+    margin: 0.5rem 0;
+    
+}
+.producto .botonEliminar{
+    padding: 0.5rem 1rem;
+    border: none;
+    background: #c0392b;
+    color: white;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-bottom: 2rem;   
+}
+.botonEliminar:hover {
+    background: #a0281f;
+}
+        
+    </style>

@@ -1,0 +1,62 @@
+---
+import { string } from "astro:schema"
+
+// creo un formulario para los datos de envío para poder reutilizarlo en finalizar pedido.astro
+export interface Props{
+    nombre: string;
+    input1: string;
+    input2: string;
+    input3?: string; // puede ser opcional
+}
+const {nombre, input1, input2, input3} = Astro.props;
+---
+<main>
+    <section>
+    <h2>{nombre}</h2>
+    <form>
+        <label for="envio-direccion">{input1}</label>
+        <input id="envio-direccion" type="text"/>
+
+        <label for="envio-cp">{input2}</label>
+        <input id="envio-cp" type="text"/>
+
+        {input3 && (
+        <>
+        <label for="envio-ciudad">{input3}</label>
+        <input id="envio-ciudad" type="text"/>
+        </>
+        )}
+        <button>Enviar</button>
+    </form>
+    </section>
+
+    <style>
+    h2{
+        text-align: center;
+        margin-top: 1rem;
+    }
+    form{
+        display: flex;
+        flex-direction: column;
+        gap: 0.8rem;
+        width: 250px;
+        margin: auto;
+        align-items: center;
+        text-align: center;
+        padding: auto;
+        padding: 1rem;
+        border-radius: 6px;       
+    }
+        button{
+    padding: 0.5rem 1rem;
+    border: none;
+    background: #0602ff;
+    color: white;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-bottom: 0.1rem;          
+    }
+    button:hover{
+        background: #0083c0;
+    }
+    </style>

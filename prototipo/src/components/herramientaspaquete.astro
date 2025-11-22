@@ -1,0 +1,60 @@
+---
+// voy a crear un componente herramientaspaquete para reutilizar en las pagina de inicio
+export interface Props {
+    nombre: string;
+    descripcion: string;
+    imagenAlt: string;
+}
+const { nombre, descripcion, imagenAlt } = Astro.props;
+---
+
+<section class="herramienta">
+    <h2>{ nombre }</h2>
+    <p>{ descripcion }</p>
+    <img src="#" alt="{ imagenAlt }">
+</section>
+
+
+<style>
+
+ChatGPT Plus
+
+Perfecto, esto es muy sencillo:
+Ahora mismo cada herramienta está dentro de un <div> que solo contiene una herramienta.
+Para que las 4 salgan en horizontal, tienes que aplicar display: flex al contenedor que agrupa las 4, NO dentro del componente individual.
+
+👉 Tu componente herramienta debe ser solo la tarjeta.
+👉 El flex debe estar en la página donde las usas.
+
+✅ 1. Deja el componente SIN flex, solo como tarjeta
+
+herramientaspaquete.astro:
+
+---
+export interface Props {
+  nombre: string;
+  descripcion: string;
+  imagenAlt: string;
+}
+const { nombre, descripcion, imagenAlt } = Astro.props;
+---
+
+<section class="herramienta">
+  <h2>{nombre}</h2>
+  <p>{descripcion}</p>
+  <img src="#" alt={imagenAlt}>
+</section>
+
+<style>
+    .herramienta {
+    text-align: center;
+    width: 200px; /* 🔥 controla tamaño */
+    }
+
+    .herramienta img {
+    width: 100%;    /* 🔥 imagen más grande */
+    height: 150px;  /* 🔥 altura visible */
+    object-fit: cover;  /* 🔥 recorte elegante */
+    border-radius: 6px;
+    }
+</style>

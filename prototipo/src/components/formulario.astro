@@ -1,0 +1,55 @@
+---
+// esto lo hago para poder modificar el formularios y no tener que crear 2 
+export interface Props {
+    titulo: string;
+    nombreBoton: string;  
+}
+const { titulo, nombreBoton } = Astro.props; 
+
+---
+<section class="formulario">
+<h2>{titulo}</h2>
+<form>
+<label for="login-email">Email</label>
+<input id="login-email" type="email">
+<label for="login-pass">Contraseña</label>
+<input id="login-pass" type="password">
+
+<button type="submit">{nombreBoton}</button>
+</form>
+</section>
+
+<style>
+    .formulario 
+    h2{
+        text-align: center;
+        text-transform: capitalize;
+        margin-top: 5rem;       
+    }
+    form{
+        display: flex;
+        flex-direction: column;
+        gap: 0.8rem;
+        width: 250px;
+        margin: auto;
+        align-items: center;
+        text-align: center;
+        padding: auto;
+        padding: 1rem;
+        border-radius: 6px;
+        
+
+    }
+    button{
+    padding: 0.5rem 1rem;
+    border: none;
+    background: #0602ff;
+    color: white;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-bottom: 0.1rem;          
+    }
+    button:hover{
+        background: #0083c0;
+    }
+</style>

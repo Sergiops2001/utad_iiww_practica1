@@ -1,0 +1,63 @@
+---
+import Encabezado from "../layouts/Encabezado.astro"
+import Suscripciones from "../components/suscripciones.astro"
+import Herramientas from "../components/herramientaspaquete.astro"
+import Herramientaspaquete from "../components/herramientaspaquete.astro"
+---
+<Encabezado>
+<!-- Presentacion del paquete  -->
+<section class="paquete">
+	<h2>Presentacion del paquete</h2>
+	<h3>Nombre del paquete</h3>
+	<p>Descriocion del paquete e información importante</p>
+	<img src="#" alt="imagen del paquete">
+</section>
+<!-- Herramientas del paquete  -->
+ <div class="contenedor-herramientas">
+ <Herramientas
+    nombre="Editor de textos"
+	descripcion="Breve descripcion de la herramienta"
+	imagenAlt="editor de textos">
+ </Herramientas>
+  <Herramientas
+    nombre="Editor de video"
+	descripcion="Breve descripcion de la herramienta"
+	imagenAlt="editor de video">
+ </Herramientas>
+  <Herramientas
+    nombre="Editor de imagenes"
+	descripcion="Breve descripcion de la herramienta"
+	imagenAlt="editor de imagenes">
+ </Herramientas>
+  <Herramientas
+    nombre="IDE"
+	descripcion="Breve descripcion de la herramienta"
+	imagenAlt="IDE">
+ </Herramientas>
+ </div>
+
+<!-- Suscripciones del paquete  -->
+<Suscripciones />
+
+</Encabezado>
+
+
+	
+	</body>
+</html>
+<style>
+	.contenedor-herramientas{
+  		display: flex;
+		gap: 1rem;
+  		justify-content: center;
+	}
+	.paquete {
+		text-align: center;
+		margin-bottom: 2rem;
+	}
+	.paquete img{
+		width: 300px;
+		height: 200px;
+		border-radius: 6px;
+	}
+</style>

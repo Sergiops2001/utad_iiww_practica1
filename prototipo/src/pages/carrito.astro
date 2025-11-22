@@ -1,0 +1,38 @@
+---
+import Encabezado from "../layouts/Encabezado.astro"
+import ProductoCarrito from "../components/productoCarrito.astro"
+---
+<Encabezado></Encabezado>
+<ProductoCarrito producto="numero1" descripcion="descripcion del producto numero 1" precio="99$" ></ProductoCarrito>
+<ProductoCarrito producto="numero2" descripcion="descripcion del producto numero 2" precio="99$" ></ProductoCarrito>
+<ProductoCarrito producto="numero3" descripcion="descripcion del producto numero 3" precio="99$" ></ProductoCarrito>
+      <!-- Total -->
+      <div>
+        <h3>Total a pagar: $198</h3>
+        <a href="/finalizarpedido">
+          <button>Finalizar compra</button>
+        </a>
+      </div>
+    </section>
+  </main>
+
+</body>
+
+</html>
+<style>
+    div{
+        text-align: center;
+
+    }
+    button{
+    padding: 0.5rem 1rem;
+    border: none;
+    background: #09ec55;
+    color: white;
+    border-radius: 6px;
+    cursor: pointer;
+    }
+    button:hover{
+        background: #02ffff;
+    }
+</style>

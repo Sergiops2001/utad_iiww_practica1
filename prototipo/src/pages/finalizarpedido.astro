@@ -1,0 +1,53 @@
+---
+import FormularioFinal from '../components/formulariofinal.astro';
+---
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Finalizar pedido</title>
+</head>
+
+<body>
+
+  <header>
+    <img src="#" alt="Logo del sitio">
+    <h1>Finalizar pedido</h1>
+  </header>
+  <div>
+<FormularioFinal nombre='Datos de envio' input1='Direccion' input2='Codigo postal' input3='Ciudad'></FormularioFinal>
+<FormularioFinal nombre='Datos de facturación' input1='Nombre completo' input2='NIF/CIF' input3=''></FormularioFinal>
+<FormularioFinal nombre='Información de pago' input1='Nombre de tarjeta' input2='Fecha de caducidad' input3='CVV'></FormularioFinal>
+</div>
+  <main>
+
+  </main>
+
+</body>
+
+</html>
+<style>
+  html, body{
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: rgb(196, 215, 252);
+  }
+  h1{
+    text-align: center;
+    margin-top: 1rem;
+  }
+  img{
+    display: block;
+    margin: auto;
+    width: 100px;
+    height: 100px;
+  }
+  div{
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 2rem;
+  }
+</style>
