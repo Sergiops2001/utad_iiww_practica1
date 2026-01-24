@@ -11,52 +11,47 @@ export interface Props{
 const {nombre, input1, input2, input3} = Astro.props;
 ---
 <main>
-    <section>
-    <h2>{nombre}</h2>
+    <section class="final-item">
+    <h2 aria-label="{nombre}">{nombre}</h2>
     <form>
         <label for="envio-direccion">{input1}</label>
-        <input id="envio-direccion" type="text"/>
+        <input id="envio-direccion" type="text" class="formulary-input" aria-label="{input1}" aria-required="true"/>
 
         <label for="envio-cp">{input2}</label>
-        <input id="envio-cp" type="text"/>
+        <input id="envio-cp" type="text" class="formulary-input" aria-label="{input2}" aria-required="true"/>
 
         {input3 && (
         <>
-        <label for="envio-ciudad">{input3}</label>
-        <input id="envio-ciudad" type="text"/>
+        <label for="envio-ciudad" aria-label="{input3}" aria-required="true">{input3}</label>
+        <input id="envio-ciudad" type="text" class="formulary-input" aria-label="{input3}" aria-required="true"/>
         </>
         )}
-        <button>Enviar</button>
+        <button class="formulary-button" role="button" aria-label="Enviar formulario">Enviar</button>
     </form>
     </section>
 
-    <style>
-    h2{
-        text-align: center;
-        margin-top: 1rem;
-    }
-    form{
-        display: flex;
-        flex-direction: column;
-        gap: 0.8rem;
-        width: 250px;
-        margin: auto;
-        align-items: center;
-        text-align: center;
-        padding: auto;
-        padding: 1rem;
-        border-radius: 6px;       
-    }
-        button{
-    padding: 0.5rem 1rem;
-    border: none;
-    background: #0602ff;
-    color: white;
-    border-radius: 6px;
-    cursor: pointer;
-    margin-bottom: 0.1rem;          
-    }
-    button:hover{
-        background: #0083c0;
-    }
+    <style lang="scss">
+        @use '../styles/variables' as *;
+        @use '../styles/mixins' as *;
+        @use '../styles/components/inputs.scss' as *;
+        @use '../styles/components/buttons.scss' as *;
+        @use '../styles/components/titles.scss' as *;
+        @use '../styles/components/containers.scss' as *;
+
+        .final-item{
+            background: $color-transition-carrito;
+            h2{
+                text-align: center;
+                margin-bottom: $spacing-md;
+            }
+
+        }
+        form{
+            display: flex;
+            flex-direction: column;
+            gap: $spacing-md;
+            width: 300px;
+            margin: 0 auto 2rem auto;
+        }
+
     </style>

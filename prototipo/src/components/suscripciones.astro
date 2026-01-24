@@ -1,29 +1,35 @@
 <!-- Suscripciones del paquete  -->
 	<section class="suscripciones">
-		<h2>Planes de suscripción</h2>
+		<h2 class="title-large" aria-label="Planes de suscripción">Planes de suscripción</h2>
         <div class="planessuscripcion">
-		<article  class="plan">
-			<h3>suscripción 1</h3>
-			<p>Detalles de la suscripcion</p>
-			<p>Precio: 99$</p>
-			<button>Contratar</button>
+		<article  class="suscription-item">
+			<h3 aria-label="suscripción 1">suscripción 1</h3>
+			<p aria-label="Detalles de la suscripcion">Detalles de la suscripcion</p>
+			<p aria-label="Precio: 99$">Precio: 99$</p>
+			<button class="suscription-button" role="button" aria-label="Contratar suscripción 1">Contratar</button>
 		</article>
-			<article  class="plan">
-			<h3>suscripción 2</h3>
-			<p>Detalles de la suscripcion</p>
-			<p>Precio: 99$</p>
-			<button>Contratar</button>
+			<article  class="suscription-item">
+			<h3 aria-label="suscripción 2">suscripción 2</h3>
+			<p aria-label="Detalles de la suscripcion">Detalles de la suscripcion</p>
+			<p aria-label="Precio: 99$">Precio: 99$</p>
+			<button class="suscription-button" role="button" aria-label="Contratar suscripción 2">Contratar</button>
 		</article>
-			<article  class="plan">
-			<h3>suscripción 3</h3>
-			<p>Detalles de la suscripcion</p>
-			<p>Precio: 99$</p>
-			<button>Contratar</button>
+			<article  class="suscription-item">
+			<h3 aria-label="suscripción 3">suscripción 3</h3>
+			<p aria-label="Detalles de la suscripcion">Detalles de la suscripcion</p>
+			<p aria-label="Precio: 99$">Precio: 99$</p>
+			<button class="suscription-button" role="button" aria-label="Contratar suscripción 3">Contratar</button>
 		</article>
         </div>
 	</section>
 
-<style>
+<style lang="scss">	
+@use '../styles/variables' as *;
+@use '../styles/mixins' as *;
+@use '../styles/components/containers.scss' as *;
+@use '../styles/components/buttons.scss' as *;
+@use '../styles/components/titles.scss' as *;
+
     .suscripciones h2 {
         text-align: center;
         text-transform: capitalize;

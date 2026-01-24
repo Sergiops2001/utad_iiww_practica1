@@ -7,49 +7,41 @@ export interface Props {
 const { titulo, nombreBoton } = Astro.props; 
 
 ---
-<section class="formulario">
-<h2>{titulo}</h2>
+<section class="resultado-item">
+<h2 class="title-large" aria-label="{titulo}">{titulo}</h2>
 <form>
-<label for="login-email">Email</label>
-<input id="login-email" type="email">
-<label for="login-pass">Contraseña</label>
-<input id="login-pass" type="password">
+<label for="login-email" class="title-small" aria-label="Correo electrónico" aria-required="true">Email</label>
+<input class="formulary-input" id="login-email" type="email" aria-label="Correo electrónico" aria-required="true">
+<label for="login-pass" class="title-small" aria-label="Contraseña" aria-required="true">Contraseña</label>
+<input class="formulary-input" id="login-pass" type="password">
 
-<button type="submit">{nombreBoton}</button>
+<button class="formulary-button" type="submit" role="button" aria-label="Haz click en {nombreBoton}">{nombreBoton}</button>
 </form>
 </section>
 
-<style>
-    .formulario 
+<style lang="scss">
+    @use '../styles/variables' as *;
+    @use '../styles/mixins' as *;
+    @use '../styles/components/inputs.scss' as *;
+    @use '../styles/components/buttons.scss' as *;
+    @use '../styles/components/titles.scss' as *;
+    @use '../styles/components/containers.scss' as *;
+
     h2{
         text-align: center;
-        text-transform: capitalize;
-        margin-top: 5rem;       
+        margin-bottom: $spacing-md;
     }
+
     form{
         display: flex;
         flex-direction: column;
-        gap: 0.8rem;
-        width: 250px;
-        margin: auto;
-        align-items: center;
-        text-align: center;
-        padding: auto;
-        padding: 1rem;
-        border-radius: 6px;
-        
+        gap: $spacing-md;
+        width: 300px;
+        margin: 0 auto 2rem auto;
+    }
+    
 
-    }
-    button{
-    padding: 0.5rem 1rem;
-    border: none;
-    background: #0602ff;
-    color: white;
-    border-radius: 6px;
-    cursor: pointer;
-    margin-bottom: 0.1rem;          
-    }
-    button:hover{
-        background: #0083c0;
-    }
+
+
+    
 </style>

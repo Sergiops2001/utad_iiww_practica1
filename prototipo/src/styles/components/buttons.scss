@@ -1,0 +1,75 @@
+@use '../variables' as *;
+
+.search-button {
+    background-color: $color-search-button;
+    border-radius: $radius-sm;
+    border: none;
+    padding: $spacing-md $spacing-lg;
+    color: white;
+    cursor: pointer;
+    font-size: $font-size-base;
+    transition: background-color $transition-base;
+    
+    &:hover {
+        background-color: darken($color-search-button, 10%);
+    }
+}
+
+.suscription-button {
+    background-color: $color-suscription;
+    border-radius: $radius-sm;
+    border: none;
+    padding: $spacing-md $spacing-lg;
+    color: white;
+    cursor: pointer;
+    font-size: $font-size-base;
+    transition: background-color $transition-base;
+    
+    &:hover {
+        background-color: darken($color-search-button, 10%);
+    }
+}
+
+.formulary-button {
+    background-color: $color-primary;
+    border-radius: $radius-sm;
+    border: none;
+    padding: 8px;
+    color: white;
+    cursor: pointer;
+    font-size: $font-size-base;
+    transition: background-color $transition-base;
+    
+    &:hover {
+        background-color: darken($color-primary, 10%);
+    }
+}
+
+.delete-button {
+    background-color: $color-danger;
+    border-radius: $radius-sm;
+    border: none;
+    padding: 8px;
+    color: white;
+    cursor: pointer;
+    font-size: $font-size-base;
+    transition: background-color $transition-base;
+    
+    &:hover {
+        background-color: darken($color-danger, 10%);
+    }
+}
+.green-button {
+    background-color: $color-success;
+    border-radius: $radius-sm;
+    border: none;
+    padding: $spacing-md $spacing-lg;
+    color: white;
+    cursor: pointer;
+    font-size: $font-size-base;
+    transition: background-color $transition-base;
+    
+    &:hover {
+        background-color: darken($color-success, 10%);
+    }
+}

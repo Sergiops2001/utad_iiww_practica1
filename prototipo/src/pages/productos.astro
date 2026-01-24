@@ -6,13 +6,13 @@ import Suscripciones from "../components/suscripciones.astro"
 
   <main>
     <!-- Descripción del producto -->
-    <section>
-      <h2 class="titulo">Nombre del producto</h2>
-      <p class="descripcion">Breve descripción del producto e información importante.</p>
+    <section class="suscription-item">
+      <h2 class="title-large" aria-label="Nombre del producto">Nombre del producto</h2>
+      <p class="title-medium" aria-label="Breve descripción del producto e información importante">Breve descripción del producto e información importante.</p>
 
-      <div>
-        <img src="#" alt="Imagen del producto 1">
-        <img src="#" alt="Imagen del producto 2">
+      <div class="images">
+        <img src="#" alt="Imagen del producto 1" aria-label="Imagen del producto 1">
+        <img src="#" alt="Imagen del producto 2" aria-label="Imagen del producto 2">
       </div>
     </section>
 
@@ -24,17 +24,33 @@ import Suscripciones from "../components/suscripciones.astro"
 </body>
 
 </html>
-<style>
-    div{
+<style lang="scss">
+  @use '../styles/variables' as *;
+  @use '../styles/mixins' as *;
+  @use '../styles/components/titles.scss' as *;
+  @use '../styles/components/containers.scss' as *;
+
+  .suscription-item{
+    background: $color-transition-carrito;
+    margin-inline: 20rem;
+    margin-top: 2rem;
+  }
+
+  section{
         display: flex;
+        flex-direction: column;
+        align-items: center;
         gap: 1rem;
-        justify-content: center;
-        margin-bottom: 2rem;
+        margin-bottom: $spacing-xl;
+    }
+    .images{
+        display: flex;
+        gap: $spacing-md;
     }
     img{
         width: 300px;
         height: 200px;
-        background: #ccc; /* modo prototipo */
+        background: #ccc;
         border-radius: 6px;
     }
     .titulo{

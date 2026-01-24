@@ -1,0 +1,23 @@
+@use '../variables.scss' as *;
+
+.text-input {
+    padding: 12px;
+    text-align: center;
+    border-radius: $radius-sm;
+    background-color: $color-bg-secondary;
+
+&:focus {
+    outline: 2px solid $color-primary;
+}
+}
+
+.formulary-input {
+    padding: 10px;
+    text-align: center;
+    border-radius: $radius-sm;
+    background-color: $color-bg-secondary;
+
+&:focus {
+    outline: 2px solid $color-primary;
+}
+}

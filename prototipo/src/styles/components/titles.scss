@@ -1,0 +1,15 @@
+@use '../variables.scss' as *;
+
+    .title-large {
+        font-size: $font-size-3xl;
+        text-transform: capitalize;
+    }
+    .title-medium {
+        font-size: $font-size-xl;
+        text-transform: capitalize;
+    }
+    .title-small {
+        font-size: $font-size-lg;
+        text-transform: capitalize;
+        margin-top: 4px;
+    }

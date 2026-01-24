@@ -5,60 +5,69 @@ import Encabezado from "../layouts/Encabezado.astro"
 
 <main>
     <section>
-    <h2>Busqueda de paquetes</h2>
+    <h2 class="title-large" aria-label="Busqueda de paquetes">Busqueda de paquetes</h2>
     <!--Buscador -->
-    <form>
-        <input type="text" placeholder="Busca un paquete">
-        <button type="submit">Buscar</button>
+    <form role="search">
+        <input type="text" placeholder="Busca un paquete" class="text-input" aria-label="Campo de búsqueda de paquetes" aria-required="true"/>
+        <button type="submit" class="search-button" role="button" aria-label="Buscar paquetes" >Buscar</button>
     </form>
     </section>
 
     <!--Resultados de busqueda -->
     <section class="resultado">
         <article>
-            <h4>Nombre del producto</h4>
-            <p>Breve descripcion del producto</p>
-            <a href="/productos">Ver producto</a>
+            <h4 class="title-medium" aria-label="Nombre del producto">Nombre del producto</h4>
+            <p aria-label="Breve descripcion del producto">Breve descripcion del producto</p>
+            <a href="/productos" class="title-small" aria-label="Ver producto" role="link">Ver producto</a>
         </article>
     </section>
 </main>
 
 </body>
 </html>
-<style>
-    h2{
-        text-align: center;
-        margin-top: 2rem;
-    }
-    form{
-        display: flex;
-        justify-content: center;
-        gap: 0.5rem;
-        margin-top: 1rem;
-    }
-    button{
-        padding: 0.5rem 1rem;
-        border: none;
-        background: #056168;
-        color: white;
-        border-radius: 6px;
-        cursor: pointer;
-    }
-    .resultado{
-        display: flex;
-        flex-direction: column;
+<style lang="scss">
+    @use '../styles/variables.scss' as *;
+    @use '../styles/mixins' as *;
+    @use '../styles/components/buttons.scss' as *;
+    @use '../styles/components/inputs.scss' as *;
+    @use '../styles/components/titles.scss' as *;
+    @use '../styles/components/containers.scss' as *;
+
+    main{
         align-items: center;
-        margin-top: 2rem;
-        width: 80%;
-        max-width: 600px;
-        margin: 2rem auto;
-        margin-bottom: 2rem;
-        background-color: rgb(187, 230, 247);
-        padding: 1rem;
-        border-radius: 6px;
+        text-align: center;
+        flex: auto;
+        display:block;
     }
+
+    // aqui quiero poner una animacion de que cuando se pase el raton por el contenedor haga una transicion
+    .resultado{
+        @include center-flex;
+        margin-inline: 45rem;
+        background-color: $color-item;
+        padding: $spacing-xl;
+        margin-top: $spacing-xl;
+        margin-bottom: $spacing-xl;
+        border-radius: $radius-md;
+    }
+    .resultado:hover{
+        background-color: $color-transition;
+        transition: $color-transition $transition-slow ease; 
+    }
+    .text-input{
+        width: 600px;
+        border-color: $color-primary;
+        }
     a{
         text-decoration: none;
-        color: #0648fc;
+        color: $color-primary;
     }
+    a:hover{
+        background-color: $color-primary;
+        color: white;
+        padding: 6px;
+        border-radius: $radius-md;
+        transition: $color-primary $transition-slow ease; 
+    }
+
 </style>

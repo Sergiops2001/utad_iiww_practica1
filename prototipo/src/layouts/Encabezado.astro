@@ -3,80 +3,101 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8">
-<title>Paquetes de Software</title>
+    <meta charset="UTF-8">
+    <title>Paquetes de Software</title>
 </head>
-	<body>
-    <!--Cabecera común -->
+<body>
+    <!-- Cabecera común -->
     <header>
-    <img src="#" alt="logo">
-    <h1>Paquetes de software</h1>
+        <img src="#" alt="logo" aria-label="Logo de la empresa">
+        <h1 aria-label="Paquetes de software">Paquetes de software</h1>
     </header>
+    
     <!-- Navbar -->
     <nav>
-	<ul>
-	<li><a href="/">Inicio</a></li>
-	<li><a href="/buscar">Buscar</a></li>
-	<li><a href="/productos">Productos</a></li>
-	<li><a href="/usuario">Usuario</a></li>
-	<li><a href="/carrito">Carrito</a></li>
-	</ul>
-</nav>
-<main>
-	<slot />
-</main>
-	</body>
+        <ul>
+            <li><a href="/" aria-current="page">Inicio</a></li>
+            <li><a href="/buscar">Buscar</a></li>
+            <li><a href="/productos">Productos</a></li>
+            <li><a href="/usuario">Usuario</a></li>
+            <li><a href="/carrito">Carrito</a></li>
+        </ul>
+    </nav>
+    
+    <main>
+        <slot />
+    </main>
+</body>
 </html>
 
-<style>
-html, body {
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  font-family: Arial, Helvetica, sans-serif;
-  background-color: #f6f6f6;
-}
+<style lang="scss">
+    @use '../styles/variables' as *;
+    @use '../styles/mixins' as *;
 
-/* CABECERA */
-header {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-  padding: 1rem 2rem;
-  background-color: #ffffff;
-  border-bottom: 1px solid #ddd;
-}
+    // RESET GLOBAL
+    html, body {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        font-family: $font-family;
+        background-color: $color-bg-secondary;
+    }
 
-header img {
-  width: 50px;
-  height: 50px;
-  background: #ccc; /* modo prototipo */
-  border-radius: 6px;
-}
+    // CABECERA
+    header {
+        display: flex;
+        align-items: center;
+        gap: $spacing-md;
+        padding: $spacing-md $spacing-xl;
+        background-color: $color-bg;
+        border-bottom: 1px solid #ddd;
+        
+        img {
+            width: 50px;
+            height: 50px;
+            background: #ccc;
+            border-radius: $radius-sm;
+        }
+        
+        h1 {
+            margin: 0;
+            font-size: $font-size-xl;
+            color: $color-text;
+        }
+    }
 
-/* NAVBAR */
-nav {
-  background-color: #222;
-  padding: 0.5rem 0;
-}
+    // NAVBAR
+    nav {
+        background-color: #222;
+        padding: $spacing-sm 0;
+        
+        ul {
+            list-style: none;
+            display: flex;
+            gap: $spacing-xl;
+            padding: 0;
+            margin: 0 $spacing-xl;
+            
+            li {
+                a {
+                    color: white;
+                    text-decoration: none;
+                    font-weight: bold;
+                    transition: all $transition-fast;
+                    
+                    &:hover {
+                        text-decoration: underline;
+                        background-color: rgb(65, 68, 68);
+                        padding: $spacing-sm;
+                        color: lighten(white, 10%);
+                    }
+                }
+            }
+        }
+    }
 
-nav ul {
-  list-style: none;
-  display: flex;
-  gap: 2rem;
-  padding: 0;
-  margin: 0 2rem;
-}
-
-nav a {
-  color: white;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-nav a:hover {
-  text-decoration: underline;
-}
-
-
+    // MAIN
+    main {
+        width: 100%;
+    }
 </style>

@@ -6,46 +6,24 @@ export interface Props {
 }
 const { producto, descripcion, precio } = Astro.props;
 ---  
+<div class="carrito-item" aria-label="Producto en el carrito">
     <article class="producto">
-        <h3>{producto}</h3>
-        <p class="descripcion">{descripcion}</p>
-        <p class="precio">{precio}</p>
-        <button class="botonEliminar">Eliminar producto</button>
+        <h3 class="title-medium" aria-label="{producto}">{producto}</h3>
+        <p class="descripcion" aria-label="{descripcion}">{descripcion}</p>
+        <p class="precio" aria-label="{precio}">{precio}</p>
+        <button class="delete-button" role="button" aria-label="Eliminar producto">Eliminar producto</button>
     </article>
+    </div>
 
-    <style>
-.producto {
-    border: 1px solid #ccc;
-    padding: 1rem;
-    border-radius: 6px;
-    background: #fafafa;
-    text-align: center;
-    margin-bottom: 1rem;
-}
-.producto h3 {
-    margin: 0 0 0.5rem;
-    text-transform: capitalize;
-}
-.producto .descripcion{
-    color: #555;
-    margin: 0.3rem 0;   
-}
-.producto .precio{
-    font-weight: bold;
-    margin: 0.5rem 0;
+    <style lang="scss">
+    @use '../styles/variables' as *;
+    @use '../styles/mixins' as *;
+    @use '../styles/components/buttons.scss' as *;
+    @use '../styles/components/titles.scss' as *;
+    @use '../styles/components/containers.scss' as *;
     
-}
-.producto .botonEliminar{
-    padding: 0.5rem 1rem;
-    border: none;
-    background: #c0392b;
-    color: white;
-    border-radius: 6px;
-    cursor: pointer;
-    margin-bottom: 2rem;   
-}
-.botonEliminar:hover {
-    background: #a0281f;
-}
-        
+
+
+
     </style>
+    

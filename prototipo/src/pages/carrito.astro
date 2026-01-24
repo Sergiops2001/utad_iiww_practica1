@@ -3,14 +3,15 @@ import Encabezado from "../layouts/Encabezado.astro"
 import ProductoCarrito from "../components/productoCarrito.astro"
 ---
 <Encabezado></Encabezado>
+  <h1>Tu carrito</h1>
 <ProductoCarrito producto="numero1" descripcion="descripcion del producto numero 1" precio="99$" ></ProductoCarrito>
 <ProductoCarrito producto="numero2" descripcion="descripcion del producto numero 2" precio="99$" ></ProductoCarrito>
 <ProductoCarrito producto="numero3" descripcion="descripcion del producto numero 3" precio="99$" ></ProductoCarrito>
       <!-- Total -->
-      <div>
-        <h3>Total a pagar: $198</h3>
-        <a href="/finalizarpedido">
-          <button>Finalizar compra</button>
+      <div class="carrito-item" aria-label="Total del carrito">
+        <h3 class="title-medium" aria-label="Total a pagar: $198">Total a pagar: $198</h3>
+        <a href="/finalizarpedido" aria-label="Finalizar compra" role="link">
+          <button class="green-button" role="button" aria-label="Boton Finalizar compra">Finalizar compra</button>
         </a>
       </div>
     </section>
@@ -19,20 +20,17 @@ import ProductoCarrito from "../components/productoCarrito.astro"
 </body>
 
 </html>
-<style>
-    div{
-        text-align: center;
+<style lang="scss">
+    @use '../styles/variables' as *;
+    @use '../styles/mixins' as *;
+    @use '../styles/components/inputs.scss' as *;
+    @use '../styles/components/buttons.scss' as *;
+    @use '../styles/components/titles.scss' as *;
+    @use '../styles/components/containers.scss' as *;
 
+    h1{
+      @include center-flex;
     }
-    button{
-    padding: 0.5rem 1rem;
-    border: none;
-    background: #09ec55;
-    color: white;
-    border-radius: 6px;
-    cursor: pointer;
-    }
-    button:hover{
-        background: #02ffff;
-    }
+
+
 </style>

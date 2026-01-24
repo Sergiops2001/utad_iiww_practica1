@@ -1,0 +1,51 @@
+// global.scss
+// Este es el archivo PRINCIPAL que importa todo
+
+// 1️⃣ Importar variables y mixins PRIMERO
+@use 'variables' as *;
+@use 'mxins' as *;
+
+// 2️⃣ Reset básico
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+// 3️⃣ Estilos globales
+body {
+  font-family: $font-family;
+  font-size: $font-size-base;
+  color: $color-text;
+  background-color: $color-bg;
+  line-height: 1.6;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1.2;
+  font-weight: 600;
+}
+
+a {
+  color: $color-primary;
+  text-decoration: none;
+  
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+// 4️⃣ Clases de utilidad
+.container {
+  max-width: $breakpoint-xl;
+  margin: 0 auto;
+  padding: 0 $spacing-lg;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.mt-1 { margin-top: $spacing-sm; }
+.mt-2 { margin-top: $spacing-md; }
+.mt-3 { margin-top: $spacing-lg; }

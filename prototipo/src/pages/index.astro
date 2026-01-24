@@ -2,62 +2,53 @@
 import Encabezado from "../layouts/Encabezado.astro"
 import Suscripciones from "../components/suscripciones.astro"
 import Herramientas from "../components/herramientaspaquete.astro"
-import Herramientaspaquete from "../components/herramientaspaquete.astro"
 ---
-<Encabezado>
-<!-- Presentacion del paquete  -->
-<section class="paquete">
-	<h2>Presentacion del paquete</h2>
-	<h3>Nombre del paquete</h3>
-	<p>Descriocion del paquete e información importante</p>
-	<img src="#" alt="imagen del paquete">
-</section>
-<!-- Herramientas del paquete  -->
- <div class="contenedor-herramientas">
- <Herramientas
-    nombre="Editor de textos"
-	descripcion="Breve descripcion de la herramienta"
-	imagenAlt="editor de textos">
- </Herramientas>
-  <Herramientas
-    nombre="Editor de video"
-	descripcion="Breve descripcion de la herramienta"
-	imagenAlt="editor de video">
- </Herramientas>
-  <Herramientas
-    nombre="Editor de imagenes"
-	descripcion="Breve descripcion de la herramienta"
-	imagenAlt="editor de imagenes">
- </Herramientas>
-  <Herramientas
-    nombre="IDE"
-	descripcion="Breve descripcion de la herramienta"
-	imagenAlt="IDE">
- </Herramientas>
- </div>
 
-<!-- Suscripciones del paquete  -->
-<Suscripciones />
+<Encabezado />  <!-- ← AQUÍ: Auto-cerrado -->
 
-</Encabezado>
+<main>
+    <section class="producto" aria-label="Presentación del paquete">
+        <h2 class="title-large" aria-label="Presentación del paquete">Presentacion del paquete</h2>
+        <h3 class="title-medium" aria-label="Nombre del paquete">Nombre del paquete</h3>
+        <p class="title-small" aria-label="Descripcion del paquete e información importante">Descripcion del paquete e información importante</p>
+        <img src="#" alt="imagen del paquete" aria-label="Imagen del paquete">
+    </section>
 
+    <!-- Herramientas en FILA -->
+    <div class="contenedor-herramientas">
+        <div class="producto-item"><Herramientas nombre="Editor de textos" descripcion="Breve descripcion" imagenAlt="editor" /></div>
+        <div class="producto-item"><Herramientas nombre="Editor de video" descripcion="Breve descripcion" imagenAlt="video" /></div>
+        <div class="producto-item"><Herramientas nombre="Editor de imagenes" descripcion="Breve descripcion" imagenAlt="imagenes" /></div>
+        <div class="producto-item"><Herramientas nombre="IDE" descripcion="Breve descripcion" imagenAlt="IDE" /></div>
+    </div>
 
-	
-	</body>
-</html>
-<style>
-	.contenedor-herramientas{
-  		display: flex;
-		gap: 1rem;
-  		justify-content: center;
-	}
-	.paquete {
+    <Suscripciones />
+</main>
+
+<style lang="scss">
+    @use '../styles/variables' as *;
+    @use '../styles/mixins' as *;
+    @use '../styles/components/containers.scss' as *;
+	@use '../styles/components/titles.scss' as *;
+
+    main {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: $spacing-xl;
+    }
+	.producto {
+		@include center-flex;
+		flex-direction: column;
 		text-align: center;
-		margin-bottom: 2rem;
+		margin-bottom: $spacing-xl;	
 	}
-	.paquete img{
-		width: 300px;
-		height: 200px;
-		border-radius: 6px;
-	}
-</style>
+
+    .contenedor-herramientas {
+		@include box-shadow($level:3);
+        display: grid;  // ← Mejor que flex
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: $spacing-lg;
+        margin: $spacing-xl 0;
+    }
+
+</style> 
