@@ -5,15 +5,16 @@
 // tarjeta resultado buscar
 .resultado-item {
     @include center-flex;
-    flex-direction: column;  // Añado esto para mejor estructura
+    flex-direction: column; // Añado esto para mejor estructura
     background-color: $color-item;
     padding: $spacing-xl;
     margin-top: $spacing-xl;
     margin-bottom: $spacing-xl;
-    margin-inline: 45rem;  // ⚠️ Esto es muy grande, revísalo
+    max-width: 800px;
+    margin: $spacing-xl auto;
     border-radius: $radius-md;
-    transition: background-color $transition-slow ease;  // ✅ Movido aquí
-    
+    transition: background-color $transition-slow ease; // ✅ Movido aquí
+
     &:hover {
         background-color: $color-transition;
     }
@@ -33,6 +34,7 @@
         background-color: $color-transition;
     }
 }
+
 // tarjeta suscripccion
 .suscription-item {
     @include center-flex;
@@ -49,18 +51,20 @@
         background-color: $color-transition;
     }
 }
+
 // tarjeta resultado buscar
 .resultado-item {
     @include center-flex;
-    flex-direction: column;  // Añado esto para mejor estructura
+    flex-direction: column; // Añado esto para mejor estructura
     background-color: $color-formulary;
     padding: $spacing-xl;
     margin-top: $spacing-xl;
     margin-bottom: $spacing-xl;
-    margin-inline: 45rem;  // ⚠️ Esto es muy grande, revísalo
+    max-width: 800px;
+    margin: $spacing-xl auto;
     border-radius: $radius-md;
-    transition: background-color $transition-slow ease;  // ✅ Movido aquí
-    
+    transition: background-color $transition-slow ease; // ✅ Movido aquí
+
     &:hover {
         background-color: $color-transition;
     }
@@ -69,20 +73,22 @@
 //contenerdor de producto del carrito
 .carrito-item {
     @include center-flex;
-    flex-direction: column;  // Añado esto para mejor estructura
+    flex-direction: column; // Añado esto para mejor estructura
     background-color: $color-carrito-item;
     padding: $spacing-xl;
     margin-top: $spacing-xl;
     margin-bottom: $spacing-xl;
-    margin-inline: 3rem;  // ⚠️ Esto es muy grande, revísalo
+    max-width: 800px;
+    margin: $spacing-xl auto;
     border-radius: $radius-md;
-    transition: background-color $transition-slow ease;  // ✅ Movido aquí
-    
+    transition: background-color $transition-slow ease; // ✅ Movido aquí
+
     &:hover {
         background-color: $color-transition-carrito;
     }
 
 }
+
 // tarjeta suscripccion
 .final-item {
     @include center-flex;

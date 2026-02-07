@@ -1,0 +1,15 @@
+.title-large {
+  font-size: 1.875rem;
+  text-transform: capitalize;
+}
+
+.title-medium {
+  font-size: 1.25rem;
+  text-transform: capitalize;
+}
+
+.title-small {
+  font-size: 1.125rem;
+  text-transform: capitalize;
+  margin-top: 4px;
+}/*# sourceMappingURL=titles.css.map */

@@ -43,11 +43,10 @@ import Encabezado from "../layouts/Encabezado.astro"
     // aqui quiero poner una animacion de que cuando se pase el raton por el contenedor haga una transicion
     .resultado{
         @include center-flex;
-        margin-inline: 45rem;
+        max-width: 800px;
+        margin: $spacing-xl auto;
         background-color: $color-item;
         padding: $spacing-xl;
-        margin-top: $spacing-xl;
-        margin-bottom: $spacing-xl;
         border-radius: $radius-md;
     }
     .resultado:hover{

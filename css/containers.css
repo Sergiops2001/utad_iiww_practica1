@@ -1,0 +1,156 @@
+.resultado-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-color: #8fb5ec;
+  padding: 2rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  margin-inline: 45rem;
+  border-radius: 1rem;
+  -webkit-transition: background-color 500ms ease ease;
+  transition: background-color 500ms ease ease;
+}
+.resultado-item:hover {
+  background-color: #b2e7fc;
+}
+
+.producto-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #8fb5ec;
+  padding: 2rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  border-radius: 1rem;
+  -webkit-transition: background-color 500ms ease ease;
+  transition: background-color 500ms ease ease;
+}
+.producto-item:hover {
+  background-color: #b2e7fc;
+}
+
+.suscription-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #8ce0d2;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 2rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  border-radius: 1rem;
+  -webkit-transition: background-color 500ms ease ease;
+  transition: background-color 500ms ease ease;
+}
+.suscription-item:hover {
+  background-color: #b2e7fc;
+}
+
+.resultado-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-color: #bee0ee;
+  padding: 2rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  margin-inline: 45rem;
+  border-radius: 1rem;
+  -webkit-transition: background-color 500ms ease ease;
+  transition: background-color 500ms ease ease;
+}
+.resultado-item:hover {
+  background-color: #b2e7fc;
+}
+
+.carrito-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-color: #d3dfe4;
+  padding: 2rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  margin-inline: 3rem;
+  border-radius: 1rem;
+  -webkit-transition: background-color 500ms ease ease;
+  transition: background-color 500ms ease ease;
+}
+.carrito-item:hover {
+  background-color: #c2d9dd;
+}
+
+.final-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #8ce0d2;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 2rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  border-radius: 1rem;
+  -webkit-transition: background-color 500ms ease ease;
+  transition: background-color 500ms ease ease;
+}
+.final-item:hover {
+  background-color: #b2e7fc;
+}/*# sourceMappingURL=containers.css.map */

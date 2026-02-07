@@ -1,0 +1,19 @@
+.text-input {
+  padding: 12px;
+  text-align: center;
+  border-radius: 0.5rem;
+  background-color: #f9fafb;
+}
+.text-input:focus {
+  outline: 2px solid #3b82f6;
+}
+
+.formulary-input {
+  padding: 10px;
+  text-align: center;
+  border-radius: 0.5rem;
+  background-color: #f9fafb;
+}
+.formulary-input:focus {
+  outline: 2px solid #3b82f6;
+}/*# sourceMappingURL=inputs.css.map */
